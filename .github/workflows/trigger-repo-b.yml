@@ -1,0 +1,18 @@
+name: Trigger repository B
+on:
+    push:
+        branches:
+            - main
+jobs:
+    trigger-repo-b:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Trigger repository B
+              run: |
+                echo "Triggering repository B"
+            # - uses: convictional/trigger-workflow-and-wait@v1.6.1
+            #   with:
+            #     owner: rakib020
+            #     repo: repository-b
+            #     github_token: ${{ secrets.ACCESS_TOKEN }}
+            #     workflow_file_name: pull-repo-a.yml
